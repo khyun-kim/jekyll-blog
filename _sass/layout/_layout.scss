@@ -1,0 +1,17 @@
+/**
+ * Grid helpers
+ */
+ @media screen and (min-width: $on-large) {
+  .one-half {
+    width: -webkit-calc(50% - (#{$spacing-unit} / 2));
+    width:         calc(50% - (#{$spacing-unit} / 2));
+  }
+}
+@import
+  "../include/header.scss",
+  "../include/footer.scss",
+  "page",
+  "posts",
+  "home"
+  
+  ;
