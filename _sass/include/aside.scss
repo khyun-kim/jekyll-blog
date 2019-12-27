@@ -1,0 +1,34 @@
+.aside-profile{
+    text-align: center;
+    img{
+        margin-bottom: 40px;
+        max-width: 245px;
+        border-radius: 50%;
+    }
+    h2{
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
+    p{
+
+    }
+}
+/*
+| Filename                               | Count |   Bytes |  Time |
++----------------------------------------+-------+---------+-------+
+| _layouts/default.html                  |    10 |  54.77K | 0.038 |
+| feed.xml                               |     1 |  18.74K | 0.035 |
+| _includes/head.html                    |    10 |  19.18K | 0.016 |
+| _includes/header.html                  |    10 |  14.77K | 0.014 |
+| _layouts/post.html                     |     5 |  13.98K | 0.005 |
+| _layouts/home.html                     |     1 |   1.75K | 0.003 |
+| _includes/footer.html                  |    10 |   2.45K | 0.001 |
+| _posts/2016-05-20-welcome-to-jekyll.md |     1 |   1.52K | 0.000 |
+| _includes/aside.html                   |     1 |   0.15K | 0.000 |
+| _layouts/page.html                     |     1 |   0.67K | 0.000 |
+| _posts/2016-05-20-my-example-post.md   |     1 |   0.62K | 0.000 |
+| _layouts/posts.html                    |     1 |   0.00K | 0.000 |
+| _layouts/portfolio.html                |     1 |   0.00K | 0.000 |
++----------------------------------------+-------+---------+-------+
+| TOTAL (for 13 files)                   |    53 | 128.60K | 0.112 |
+*/

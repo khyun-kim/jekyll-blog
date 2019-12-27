@@ -1,9 +1,10 @@
 title: 개발 블로그
 author: khyun-kim
 email: kh030728@gmail.com
-description: > # this means to ignore newlines until "show_excerpts:"
-  안녕하세요 초보 개발자입니다.
-
+profile:
+  description: > # this means to ignore newlines until "show_excerpts:"
+    안녕하세요 초보 개발자입니다.
+  image: /assets/img/profile.png
 show_excerpts: false # set to true to show excerpts on the homepage
 
 # Minima date format
@@ -36,7 +37,6 @@ show_excerpts: false # set to true to show excerpts on the homepage
     #   instance: example.com
     # - username: jekyll2
     #   instance: example.com
-
 plugins:
  - jekyll-feed
  - jekyll-seo-tag
