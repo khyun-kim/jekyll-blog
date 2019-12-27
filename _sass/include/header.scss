@@ -3,32 +3,39 @@
  */
 header{
     @extend %page-padding;
+    margin-bottom: 10px;
+    height: 60px;
     background-color: $theme-color;
+    box-shadow: 5px 0px 5px 5px black;
     nav{
+        height: inherit;
         ul{
+            height: inherit;
             li{
+                //박스 위치 및 모양 잡기
+                float: right;
+                display: block; 
                 position: relative;
-                display: inline-block; 
-                margin-right : 5%;
+                padding-left : 2.5%;
+                padding-right : 2.5%;
+                //폰트 크기 및 위치 잡기
+                font-weight: 700;
                 font-size: 1rem;
-                line-height: 2.8rem; 
+                line-height: 4rem;
+                //글자색 및 uppercase
                 color: $theme-nav-text-color;
                 text-transform: uppercase;
             }
             .current {
-                font-weight: 700;
-            }
-            .current::after {
-                content: " "; 
-                position: relative;
-                display: block;
-                width: 85%!important;
-                bottom: 0;
-                margin: 0 auto;
-                border: 1px solid !important;
+                height: 60px;
+                background: $theme-color-light;
+                border-bottom: 3px solid $theme-color-more-light;
             }
             .current.btn-nav:hover{
                 color : $theme-color;
+            }
+            .btn-nav{
+                height: 60px;
             }
             .btn-nav::after{
                 content: " "; 
@@ -40,12 +47,11 @@ header{
                 border: 1px solid rgba(255, 255, 255, 0); 
             }
             
-            .btn-nav:hover::after{
-                border-color: $theme-nav-text-color!important;
-                width: 85%;
-                transition: width 350ms ease-in-out;
-                -webkit-transition: width 350ms ease-in-out; 
-                -moz-transition: width 350ms ease-in-out; 
+            .btn-nav:hover{
+                height: 60px;
+                background: $theme-color-light;
+                border-bottom: 3px solid $theme-color-more-light;
+                transition: 350ms;
 
             }
         }

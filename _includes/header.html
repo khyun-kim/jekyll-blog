@@ -3,35 +3,55 @@
 <header>
   <nav>
     <ul>
+      <!--배치의 역순으로 기록할 것-->
       {% case current[0] %}
-      {% when 'tags'%}
-      <!-- tags -->
-      <a href="{{ site.url }}">
-        <li class="btn-nav">Blog</li>
-      </a>
-      <li class="current">Tags</li>
+      {% when 'about'%}
+      <!-- about -->
+      <li class="current">about me</li>
       <a href="{{ site.url }}/portfolio">
-        <li class="btn-nav">Portfolio</li>
+        <li class="btn-nav">portfolio</li>
       </a>
-      <!-- portfolio -->
-      {% when 'portfolio'%}
+      <a href="{{ site.url }}/posts">
+        <li class="btn-nav">posts</li>
+      </a>
       <a href="{{ site.url }}">
         <li class="btn-nav">Blog</li>
       </a>
-      <a href="{{ site.url }}/tags">
-        <li class="btn-nav">Tags</li>
+      {% when 'posts' %}
+      <a href="{{ site.url }}/about">
+        <li class="btn-nav">about me</li>
       </a>
-      <li class="current">Portfolio</li>
+      <a href="{{ site.url }}/portfolio">
+        <li class="btn-nav">portfolio</li>
+      </a>
+      <li class="current">posts</li>
+      <a href="{{ site.url }}">
+        <li class="btn-nav">Blog</li>
+      </a>
+      {% when 'portfolio' %}
+      <a href="{{ site.url }}/about">
+        <li class="btn-nav">about me</li>
+      </a>
+      <li class="current">portfolio</li>
+      <a href="{{ site.url }}">
+        <li class="btn-nav">posts</li>
+      </a>
+      <a href="{{ site.url }}">
+        <li class="btn-nav">Blog</li>
+      </a>
       {% else %}
       <!-- others -->
-      <a href="{{ site.url }}">
-        <li class="current">Blog</li>
-      </a>
-      <a href="{{ site.url }}/tags">
-        <li class="btn-nav">Tags</li>
+      <a href="{{ site.url }}/about">
+        <li class="btn-nav">about me</li>
       </a>
       <a href="{{ site.url }}/portfolio">
-        <li class="btn-nav">Portfolio</li>
+        <li class="btn-nav">portfolio</li>
+      </a>
+      <a href="{{ site.url }}/posts">
+        <li class="btn-nav">posts</li>
+      </a>
+      <a href="{{ site.url }}">
+        <li class="current">Blog</li>
       </a>
       {% endcase %}
     </ul>
