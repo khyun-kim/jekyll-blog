@@ -37,6 +37,15 @@ show_excerpts: false # set to true to show excerpts on the homepage
     #   instance: example.com
     # - username: jekyll2
     #   instance: example.com
+
 plugins:
- - jekyll-feed
  - jekyll-seo-tag
+ - jekyll-paginate
+
+
+#paginate
+paginate: 5
+paginate_path: "blog/page:num"
+
+bootstrap:
+  assets: true

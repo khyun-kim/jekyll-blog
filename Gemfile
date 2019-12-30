@@ -5,3 +5,4 @@ gemspec
 
 gem "jekyll", ENV["JEKYLL_VERSION"] if ENV["JEKYLL_VERSION"]
 gem 'jekyll-bootstrap-sass'
+gem 'jekyll-paginate'

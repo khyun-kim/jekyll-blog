@@ -15,8 +15,9 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  @import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
-  font-family: 'Lobster', cursive;
+  @import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Jua&display=swap');
+  font-family: 'Jua', sans-serif;
+  //font-family: 'Josefin Sans', sans-serif;
   //font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
   color: $text-color;
   background-color: $background-color;
