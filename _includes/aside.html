@@ -1,5 +1,6 @@
 <div class="aside-profile">
     <img src="{{site.profile.image}}">
     <h2>{{site.author}}</h2>
+    {% if site.social.github%}<a href="https://github.com/{{ site.social.github | cgi_escape | escape }}"><img src="{{site.url}}/assets/icon/GitHub-Mark-32px.png" style="width: 24px;height: 24px;" ></a>{%endif%}
     <p>{{site.profile.description}}</p>
 </div>

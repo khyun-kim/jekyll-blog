@@ -7,6 +7,10 @@ profile:
   image: /assets/img/profile.png
 show_excerpts: false # set to true to show excerpts on the homepage
 
+social:
+  github: khyun-kim
+  facebook:
+
 # Minima date format
 # refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
 #minima:
@@ -44,7 +48,7 @@ plugins:
 
 
 #paginate
-paginate: 5
+paginate: 4
 paginate_path: "blog/page:num"
 
 bootstrap:

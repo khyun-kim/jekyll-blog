@@ -9,7 +9,7 @@ layout: default
     </div>
     <div class="col-sm-8">
       <div class="post-list">
-        <h2>Posts</h2>
+        <h2 onclick="location.href='{{site.url}}/posts'">Posts</h2>
         <ul>
           {% for post in paginator.posts %}
           <li>
@@ -22,31 +22,31 @@ layout: default
           {% endfor %}
         </ul>
       </div>
-      <div>
+      <div class="paginator">
         {% if paginator.total_pages > 1%}
         {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+        <a class="pagi-prev-active" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
         {% else %}
-        <span>&laquo; Prev</span>
+        <span class="pagi-prev-deactive">&laquo; Prev</span>
         {% endif %}
 
         {% for page in (1..paginator.total_pages) %}
         {% if page == paginator.page %}
-        <em>{{ page }}</em>
+        <span class="pagi-current-item">{{ page }}</span>
         {% elsif page == 1 %}
-        <a href="/">{{ page }}</a>
+        <a class ="pagi-item" href="/">{{ page }}</a>
         {% else %}
-        <a
+        <a class ="pagi-item"
           href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
         {% endif %}
         {% endfor %}
         {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+        <a class="pagi-next-active" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
         {% else %}
-        <span>Next &raquo;</span>
+        <span class="pagi-next-deactive">Next &raquo;</span>
         {% endif %}
-      </div>
       {% endif %}
+      </div>
     </div>
   </div>
 </div>

@@ -20,9 +20,15 @@
   display: block;
 
   h2 {
-    border-bottom: 3px solid $theme-color;
+    font-family: 'Josefin Sans', sans-serif;
     padding-left: 10px;
     margin-bottom: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  h2:hover {
+    background-color: #f1f1f1;
+    transition: .4s;
   }
 
   li {
@@ -82,4 +88,64 @@
     transition: .4s;
   }
 }
-//https://www.w3schools.com/howto/howto_css_timeline.asp
+.paginator {
+  text-align: center;
+  font-size: 0px;
+  .pagi-prev-active {
+    background: #f1f1f1;
+    font-size: 14px;
+    padding: 4px;
+    border: 1px solid #a1a1a1;
+    border-radius: 18px 0px 0px 18px;
+    border-right: 0px;
+  }
+  .pagi-prev-deactive {
+    background: #f1f1f1;
+    font-size: 14px;
+    padding: 4px;
+    border: 1px solid #a1a1a1;
+    border-radius: 18px 0px 0px 18px;
+    border-right: 0px;
+  }
+  .pagi-next-active {
+    background: #f1f1f1;
+    font-size: 14px;
+    padding: 4px;
+    border: 1px solid #a1a1a1;
+    border-radius: 0px 18px 18px 0px;
+  }
+  .pagi-next-deactive {
+    background: #f1f1f1;
+    font-size: 14px;
+    padding: 4px;
+    border: 1px solid #a1a1a1;
+    border-radius: 0px 18px 18px 0px;
+  }
+  .pagi-item {
+    background: #f1f1f1;
+    font-size: 14px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border: 1px solid #a1a1a1;
+    border-right: 0px;
+  }
+  .pagi-item:hover {
+    background: $theme-color-more-light;
+    transition: .4s;
+  }
+  .pagi-current-item {
+    background: $theme-color-more-light;
+    font-size: 14px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border: 1px solid #a1a1a1;
+    border-right: 0px;
+
+  }
+  
+}
+//https://www.w3schools.com/howto/howto_css_timeline.asp //
