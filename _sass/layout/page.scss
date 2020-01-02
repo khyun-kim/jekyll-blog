@@ -4,9 +4,9 @@
  .page-content {
     padding : $spacing-unit 15%!important;
     @media (max-width: 991px) {
-       padding: $spacing-unit 10%!important;
+       padding: $spacing-unit 5%!important;
     }
-    @media (max-width: 576px) {
+    @media (max-width: 600px) {
         padding: $spacing-unit 10px!important;
     }
     flex: 1 0 auto;

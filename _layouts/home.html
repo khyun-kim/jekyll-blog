@@ -1,54 +1,21 @@
 ---
-layout: default
+layout: home_layout
 ---
-
 <div class="home">
-  <div class="row">
-    <div class="col-sm-4">
-      {%- include aside.html -%}
-    </div>
-    <div class="col-sm-8">
-      <div class="post-list">
-        <h2 onclick="location.href='{{site.url}}/posts'">Posts</h2>
-        <ul>
-          {% for post in paginator.posts %}
-          <li>
-            <div class="post-item" onclick="location.href='{{post.url}}'">
-              <p class="list-title" href="{{ post.url }}">{{ post.title }}</p>
-              <p>{{%post.date | date: '%Y년 %m월 %d일 ' %}}<span>{{post.author}}</span></p>
-              <p class="post-context">{{post.description}}</p>
-            </div>
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
-      <div class="paginator">
-        {% if paginator.total_pages > 1%}
-        {% if paginator.previous_page %}
-        <a class="pagi-prev-active" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-        {% else %}
-        <span class="pagi-prev-deactive">&laquo; Prev</span>
-        {% endif %}
 
-        {% for page in (1..paginator.total_pages) %}
-        {% if page == paginator.page %}
-        <span class="pagi-current-item">{{ page }}</span>
-        {% elsif page == 1 %}
-        <a class ="pagi-item" href="/">{{ page }}</a>
-        {% else %}
-        <a class ="pagi-item"
-          href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-        {% endif %}
-        {% endfor %}
-        {% if paginator.next_page %}
-        <a class="pagi-next-active" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-        {% else %}
-        <span class="pagi-next-deactive">Next &raquo;</span>
-        {% endif %}
-      {% endif %}
+    <div class="recent-posts">
+      <h1>Recent posts</h1>
+      {% for post in paginator.posts offset:0 limit:3%}
+      <div class="col-lg-4" style="text-align: center;">
+        <div class="recent-post-item">
+          <h2>{{post.title}}</h2>
+          <p>{{post.description}}</p>
+        </div>
       </div>
+      {%endfor%}
     </div>
-  </div>
+    
+</div>
 </div>
 </div>
 
@@ -84,3 +51,31 @@ layout: default
       </a>
     </p>
   {%- endif -%}-->
+
+<!-- <div class="paginator">
+        {% if paginator.total_pages > 1%}
+        {% if paginator.previous_page %}
+        <a class="pagi-prev-active"
+          href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+        {% else %}
+        <span class="pagi-prev-deactive">&laquo; Prev</span>
+        {% endif %}
+
+        {% for page in (1..paginator.total_pages) %}
+        {% if page == paginator.page %}
+        <span class="pagi-current-item">{{ page }}</span>
+        {% elsif page == 1 %}
+        <a class="pagi-item" href="/">{{ page }}</a>
+        {% else %}
+        <a class="pagi-item"
+          href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+        {% endif %}
+        {% endfor %}
+        {% if paginator.next_page %}
+        <a class="pagi-next-active"
+          href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+        {% else %}
+        <span class="pagi-next-deactive">Next &raquo;</span>
+        {% endif %}
+        {% endif %}
+      </div>-->

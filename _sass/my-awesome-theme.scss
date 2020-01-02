@@ -2,8 +2,8 @@
 
 $theme-color:           #2d4671 !default;
 $theme-color-light:     #3c62a2 !default;
-$theme-color-more-light:     #5089ea !default;
-$theme-color-dark:      darken($theme-color, 25%) !default;
+$theme-color-more-light:     lighten($theme-color-light,10%) !default;
+$theme-color-dark:      darken($theme-color, 10%) !default;
 $theme-nav-text-color:      #f1f1f1 !default;
 
 $text-color:            #111 !default;
