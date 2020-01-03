@@ -1,61 +1,55 @@
 /**
  * Site header
  */
-header{
-    @extend %page-padding;
-    margin-bottom: 10px;
-    height: 60px;
-    background-color: $theme-color;
-    box-shadow: 0px 0px 5px 5px gray;
-    nav{
-        height: inherit;
-        ul{
-            height: inherit;
-            li{
-                //박스 위치 및 모양 잡기
-                float: right;
-                display: block; 
-                position: relative;
-                padding-left : 2.5%;
-                padding-right : 2.5%;
-                //폰트 크기 및 위치 잡기
-                font-weight: 700;
-                font-size: 1.7rem;
-                line-height: 6rem;
-                //글자색 및 uppercase
-                color: $theme-nav-text-color;
-                text-transform: uppercase;
-            }
-            .current {
-                height: 60px;
-                background: $theme-color-light;
-                border-bottom: 3px solid $theme-color-more-light;
-            }
-            .current.btn-nav:hover{
-                color : $theme-color;
-            }
-            .btn-nav{
-                height: 60px;
-            }
-            .btn-nav::after{
-                content: " "; 
-                position: relative;
-                display: block; 
-                width: 0;
-                bottom: 0;
-                margin: 0 auto;
-                border: 1px solid rgba(255, 255, 255, 0); 
-            }
-            
-            .btn-nav:hover{
-                height: 60px;
-                background: $theme-color-light;
-                border-bottom: 3px solid $theme-color-more-light;
-                transition: 350ms;
-
-            }
-        }
-        
+ 
+#header {
+    background: $theme-color-dark;
+    box-shadow: 0px 5px 10px #00000088;
+    @media (max-width: 1200px){
+      .container {width: 100%;}
+    }
+    
+    /* 화면 너비 0~1024px */
+    @media (max-width: 1024px){
+    }
+    
+    /* 화면 너비 0~960px */
+    @media (max-width: 960px){
+    }
+    
+    /* 화면 너비 0~600px */
+    @media (max-width: 600px){
+      .header .header-tab {margin-top: 20px; }
     }
   }
-    
+  
+  .container {position: relative; width: 1220px; margin: 0 auto;}
+  .header .header-tit a{
+    text-align: center; text-transform: uppercase; font-family: 'Josefin Sans', sans-serif; font-size:15px;
+  background-color: $theme-color; color: #fff; 
+  padding: 7px 20px 7px 20px; display: inline-block; transition: box-shadow 0.25s ease-in-out;
+  text-decoration: none; cursor: pointer; margin-top: 5px;
+  }
+  .header .header-tit a:hover {
+    box-shadow: 
+          inset -9em 0 0 0 $theme-color-light, 
+          inset 9em 0 0 0 $theme-color-light;
+  } 
+  .header .header-tab {
+    text-align: right;
+    text-transform: uppercase;
+    font-family: 'Josefin Sans',sans-serif;
+    margin-top: 20px;
+    bottom: 0px;
+  }
+  .header .header-tab a {
+    padding: 7px 14px 0px 14px;
+    font-size: 14px;
+    color: #fff;
+    translate : .4s;
+    cursor:pointer;
+    text-decoration: none;
+  }
+  .header .header-tab a:hover {
+    color: $theme-color;
+  }

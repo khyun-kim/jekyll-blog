@@ -1,9 +1,11 @@
 ---
 layout: post
-title: "MySQL 학습 내용 정리"
+title: "데이터 베이스 공부"
 author: Khyun-kim
-description: MySQL을 학습하는 동안 배운 내용을 정리한 포스트입니다.
+description: 데이터 베이스에 대하여 공부한 내용을 기록한 포스트입니다.<br>현재 기록된 내용은 MySQL과 MongoDB가 있습니다.
 ---
+
+# MySQL
 
 ## 1. 사용하면 좋은 툴
 
@@ -44,4 +46,9 @@ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '1234'
 > CREATE DATABASE [name] [options]
 
 특정 이름을 가진 데이터베이스를 부여된 옵션에 맞추어 생성한다.
+
+# [MongoDB](https://www.mongodb.com/)
+
+MongoDB는 통신 규격을 JSON을 사용하는 NoSQL 데이터베이스이며 RDMS에 비해 데이터를 빠르게 처리할 수 있으며, 데이터 분산에 용이하다.
+이 때문에 빅데이터 분야에서는 NoSQL 계열을 많이 사용한다고 한다.
 

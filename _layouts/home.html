@@ -3,54 +3,39 @@ layout: home_layout
 ---
 <div class="home">
 
-    <div class="recent-posts">
-      <h1>Recent posts</h1>
+  <div class="recent-posts">
+    <h1>Recent posts</h1>
+    <div class="row">
       {% for post in paginator.posts offset:0 limit:3%}
       <div class="col-lg-4" style="text-align: center;">
-        <div class="recent-post-item">
-          <h2>{{post.title}}</h2>
-          <p>{{post.description}}</p>
+        <div class="card">
+
+          <div class="face face1">
+
+            <div class="card-content">
+              <h3>{{post.title}}</h3>
+            </div>
+
+          </div>
+
+          <div class="face face2">
+
+            <div class="card-content">
+              <p>{{post.description}}</p>
+              <a href="{{post.url}}">Read More</a>
+            </div>
+
+          </div>
+
         </div>
       </div>
       {%endfor%}
     </div>
-    
+  </div>
+
 </div>
+
 </div>
-</div>
-
-<!--
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
-
-  {{ content }}
-
-  {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
-
-    <p class="feed-subscribe">
-      <a href="{{ 'feed.xml' | relative_url }}">
-        <svg class="svg-icon orange"><use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use></svg><span>Subscribe</span>
-      </a>
-    </p>
-  {%- endif -%}-->
 
 <!-- <div class="paginator">
         {% if paginator.total_pages > 1%}
