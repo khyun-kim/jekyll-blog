@@ -1,43 +1,53 @@
-/**
- * Posts
- */
- .post{
-   padding: 30px;
-   background: #f5f5f5;
-   border: 1px solid #c1c1c1;
-   border-radius: 5px;
-   .post-header{
-     text-align: center;
-     margin-top: 30px;
-     margin-bottom: 30px;
-     padding-bottom: 30px;
-   }
-   .post-header:after {
-    content: "";
-    display: block;
-    width: 100%;
-    border-bottom: 1px solid #a1a1a1;
+#posts-page-content {
+  h1 {
+    margin-top: 45px;
+    margin-bottom: 45px;
+    text-transform: uppercase;
   }
-   .post-title{
-   }
-   .post-author{
-     text-align: right;
-     color: #00000055;
-   }
- }
-  .social-media-list {
-    display: table;
-    margin: 0 auto;
+
+  ul {
     li {
-      float: left;
-      margin: 0 5px;
-      &:first-of-type { margin-left: 0 }
-      &:last-of-type { margin-right: 0 }
-      a {
-        display: block;
-        padding: $spacing-unit / 4;
-        border: 1px solid $theme-color-light
+      list-style: none;
+      box-shadow: 0px 0px 15px #00000055;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      height: 125px;
+      position: relative;
+      width: 100%;
+
+      img {
+        width: 125px;
+        height: 125px;
+        background: $theme-color-light;
+        vertical-align: middle;
+        float: left;
       }
-      &:hover .svg-icon { fill: currentColor; }
+
+      .post-text {
+        text-align: left;
+        padding: 10px 10px 10px 135px;
+        .post-title {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .post-author {
+          float: right;
+          color: gray;
+          font-size: 12px;
+        }
+
+        .post-description {
+          overflow: hidden; 
+          text-overflow: ellipsis; 
+          white-space: normal; 
+          line-height: 1.2;
+          max-height: 50px;
+          -webkit-line-clamp: 3;
+        }
+      }
     }
   }
+
+}

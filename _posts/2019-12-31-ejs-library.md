@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Node.js 라이브러리들"
+category: post
 author: Khyun-kim
 description: Node.js 라이브러리들에 대하여 공부한 내용을 정리하였습니다.
 ---

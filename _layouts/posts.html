@@ -1,3 +1,25 @@
 ---
 layout: default
 ---
+
+<div id="posts-page-content">
+  <h1> posts </h1>
+  <ul>
+    {%for p in site.posts%}
+    {%if p.category == "post"%}
+    <li>
+        <img />
+
+        <div class="post-text">
+          <h2 class="post-title">{{p.title}}</h2>
+          <span class="post-author">by {{p.author}} -{{p.date|date_to_string}}</span>
+          <br>
+          <p class="post-description">{{p.description}}</p>
+        </div>
+    </li>
+    <br>
+    {%endif%}
+    {%endfor%}
+  </ul>
+
+</div>
