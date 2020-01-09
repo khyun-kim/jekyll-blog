@@ -1,66 +1,63 @@
 ---
 layout: home_layout
 ---
-<div class="home">
 
-  <div class="recent-posts">
-    <h1>Recent posts</h1>
-    <div class="row">
-      {% for post in paginator.posts offset:0 limit:3%}
-      <div class="col-lg-4" style="text-align: center;">
-        <div class="card">
-
-          <div class="face face1">
-
-            <div class="card-content">
-              <h3>{{post.title}}</h3>
-            </div>
-
+{% if paginator.total_pages >= 1 %}
+<div id="home-content">
+  <ul>
+    {% for post in paginator.posts %}
+    <li>
+      <div class="post-meta">
+        <figure><img src="{{site.url}}/assets/img/profile.png"></figure>
+        <div>{{post.author}}</div>
+        <div>📅 {{post.date | date_to_string}}</div>
+      </div>
+      <div class="clearfix">
+        <div class="post-context">
+          <a href="{{post.url}}" class="post-title">{{post.title}}</a href="{{post.url}}">
+          <div class="post-preview">
+            <p>{{post.description}}</p>
           </div>
-
-          <div class="face face2">
-
-            <div class="card-content">
-              <p>{{post.description}}</p>
-              <a href="{{post.url}}">Read More</a>
-            </div>
-
+          <div class="post-bottom">
+            <div class="post-tags">하단채움</div><a>Read More</a>
           </div>
+        </div>
+        <div class="clearfix">
 
         </div>
-      </div>
-      {%endfor%}
-    </div>
+    </li>
+    {%endfor%}
+  </ul>
+
+  <div class="paginator">
+    {% if paginator.total_pages > 1%}
+    {% if paginator.previous_page %}
+    <a class="pagi-prev-active"
+      href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+    {% else %}
+    <span class="pagi-prev-deactive">&laquo; Prev</span>
+    {% endif %}
+
+    {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+    <span class="pagi-current-item">{{ page }}</span>
+    {% elsif page == 1 %}
+    <a class="pagi-item" href="/">{{ page }}</a>
+    {% else %}
+    <a class="pagi-item"
+      href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+    {% endif %}
+    {% endfor %}
+    {% if paginator.next_page %}
+    <a class="pagi-next-active" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next
+      &raquo;</a>
+    {% else %}
+    <span class="pagi-next-deactive">Next &raquo;</span>
+    {% endif %}
+    {% endif %}
   </div>
-
 </div>
-
-</div>
-
-<!-- <div class="paginator">
-        {% if paginator.total_pages > 1%}
-        {% if paginator.previous_page %}
-        <a class="pagi-prev-active"
-          href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-        {% else %}
-        <span class="pagi-prev-deactive">&laquo; Prev</span>
-        {% endif %}
-
-        {% for page in (1..paginator.total_pages) %}
-        {% if page == paginator.page %}
-        <span class="pagi-current-item">{{ page }}</span>
-        {% elsif page == 1 %}
-        <a class="pagi-item" href="/">{{ page }}</a>
-        {% else %}
-        <a class="pagi-item"
-          href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-        {% endif %}
-        {% endfor %}
-        {% if paginator.next_page %}
-        <a class="pagi-next-active"
-          href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-        {% else %}
-        <span class="pagi-next-deactive">Next &raquo;</span>
-        {% endif %}
-        {% endif %}
-      </div>-->
+{% else %}
+<p>포스트가 없어요</p>
+{% endif%}
+<!-- -->
