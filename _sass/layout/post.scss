@@ -1,4 +1,10 @@
 #post {
+  width:100%;
+  max-width: 900px;
+  margin: 30px auto;
+  box-shadow: 0px 0px 30px 30px #eeeeee88;
+  padding: 45px 15px;
+  border-radius: 30px;
   .post-header {
     .post-author {
       float: right;

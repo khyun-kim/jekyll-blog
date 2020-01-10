@@ -1,0 +1,35 @@
+---
+layout: default
+---
+<div id="portfolios">
+  <h1>portfolios</h1>
+  <div style="text-align: center;">
+  {% for portfolio in site.posts %}
+  {%if portfolio.category == "portfolio" %}
+  <div class="item">
+    <div class="card1">
+      <h2>{{portfolio.title}}</h2>
+    </div>
+    <div class="card2">
+      <div class="card2-item">
+        <div style="width: inherit;flex:1;"><p>{{portfolio.description}}</p></div>
+        <div style="width:inherit;height: 30px;"><a href="#">read more</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="item">
+    <div class="card1">
+      <h2>{{portfolio.title}}</h2>
+    </div>
+    <div class="card2">
+      <div class="card2-item">
+        <div style="flex:1;"><p>{{portfolio.description}}</p></div>
+        <div style="height: 30px;"><a href="#">read more</a></div>
+      </div>
+    </div>
+  </div>
+  {%endif%}
+  {%endfor%}
+</div>
+</div>

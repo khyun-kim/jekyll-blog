@@ -4,6 +4,7 @@ title: "데이터 베이스 공부"
 category: post
 author: Khyun-kim
 description: 데이터 베이스에 대하여 공부한 내용을 기록한 포스트입니다.<br>현재 기록된 내용은 MySQL과 MongoDB가 있습니다.
+tags: [MySQL, MongoDB]
 ---
 
 # MySQL

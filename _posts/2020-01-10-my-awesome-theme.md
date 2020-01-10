@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "나의 첫번째 포스트"
-category: post
+title: "내가 꾸민 Github-io"
+category: portfolio
 author: Khyun-kim
 description: 제가 만든 첫번째 포스트에요.
 tags: [Etc.]
