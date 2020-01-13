@@ -1,0 +1,138 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-only-nav {
+  display: none;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 0 5px black;
+  align-items: center;
+}
+
+.mobile-only-nav .mobile-nav-title {
+  flex: 1;
+  padding-left: 10px;
+  text-transform: uppercase;
+  font-size: 20px;
+  align-items: center;
+}
+
+.mobile-only-nav #menu-icon {
+  width: 64px;
+  height: auto;
+  right: 0;
+  cursor: pointer;
+}
+#mobile-only-menu {
+  display: none;
+  position: fixed;
+  background: #000000cc;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.mobile-only-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#mobile-only-menu .mobile-only-menu-title {
+  color: white;
+  font-size: 10vw;
+  text-transform: uppercase;
+  padding-bottom: 2vh;
+  margin-bottom: 3vh;
+  border-bottom: 1px solid #fff;
+  width: 80%;
+}
+
+#mobile-only-menu .mobile-only-menu-item {
+  font-size: 5vw;
+  margin: 2.5vh;
+  text-transform: uppercase;
+
+  a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+#home-container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 30% 1fr;
+  grid-template-areas: "side main";
+}
+
+#home-container .side-about-me {
+  padding-top: 10vh;
+  grid-area: side;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  box-shadow: 0 0 30px #88888888;
+}
+
+
+#home-container .side-about-me h1,
+#home-container .side-about-me h2 {
+  text-transform: uppercase;
+}
+
+#home-container .side-about-me h1 {
+  margin-bottom: 8vh;
+  font-size: 2vw;
+}
+
+#home-container .side-about-me h2 {
+  margin-bottom: 5vh;
+}
+
+#home-container .side-about-me img {
+  width: 220px;
+  height: auto;
+  margin: 0px auto;
+  border-radius: 50%;
+}
+
+#home-container .main {
+  overflow-y: scroll;
+  grid-area: main;
+}
+
+@media screen and (max-width:768px) {
+  #home-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1000px 1fr;
+    grid-template-areas: "side""main";
+  }
+
+  #home-container .main {
+    overflow-y: visible;
+  }
+
+  #home-container .side-about-me h1 {
+    display: none;
+  }
+
+  .mobile-only-nav {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+  }
+}
+@media screen and (min-width:768px) {
+    .mobile-only-menu {
+        display: none;
+    }
+}
