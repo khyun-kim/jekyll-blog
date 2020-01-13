@@ -1,22 +1,69 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: "ko" }}">
+{% include head.html %}
 
-  {%- include head.html -%}
+<body>
+  <script>
+    function clickOnEvent() {
+      var el = document.getElementById("mobile-only-menu");
+      console.log(el);
+      el.style.display = "flex";
+    }
 
-  <body>
+    function clickOffEvent() {
+      var el = document.getElementById("mobile-only-menu");
+      console.log(el);
+      el.style.display = "none";
+    }
+  </script>
 
-    {%- include header.html -%}
+  <!-- Mobile Only-->
+  <div class="mobile-only-nav">
+    <span class="mobile-nav-title">{{site.social.github}}'s dev blog</span>
+    <img id="menu-icon" onclick="clickOnEvent()" src="{{site.url}}/assets/img/profile.png">
+  </div>
+  <div id="mobile-only-menu">
+    <h1 class="mobile-only-menu-title">menu</h1>
+    <nav>
+      <ul>
+        <li class="mobile-only-menu-item"><a href="{{site.url}}/posts">post</a></li>
+        <li class="mobile-only-menu-item"><a href="{{site.url}}/portfolios">portfolios</a></li>
+        <li class="mobile-only-menu-item"><a href="{{site.url}}/about">about me</a></li>
+        <li class="mobile-only-menu-item"><a onclick="clickOffEvent()">exit</a></li>
+      </ul>
+    </nav>
+  </div>
+  <!-- for Desktop -->
+  <div id="main-frame">
 
-    <div class="clearfix";"></div>
+    <div class="side-about-me">
+      <a href="{{site.url}}" class="title">{{site.social.github}}'s dev blog</a>
 
-    <main style="flex: 1 0 auto;">
-      
-        {{ content }}
-      
-    </main>
+      <img src="{{site.url}}/assets/img/profile.png">
+      <h2>{{site.social.github}}</h2>
+      <span class="description">{{site.profile.description}}</span>
+      <nav>
+        <ul>
+          <li>
+            <a href="{{site.url}}/posts">Posts</a>
+          </li>
+          <li>
+            <a href="{{site.url}}/portfolios">Portfolio</a>
+          </li>
+          <li>
+            <a href="{{site.url}}/about">About me</a>
+          </li>
+        </ul>
+      </nav>
 
-    {%- include footer.html -%}
+      <p class="copyright">Copyright © 2020 <a href="http://github.com/khyun-kim">khyun-kim</a>. Powered by Jekyll</p>
 
-  </body>
+    </div>
+
+    <div class="main">
+      {{ content }}
+    </div>
+  </div>
+</body>
 
 </html>

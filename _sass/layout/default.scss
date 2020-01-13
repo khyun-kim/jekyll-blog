@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
 }
-
+/* MOBILE ONLY*/
 .mobile-only-nav {
   display: none;
   top: 0;
@@ -10,6 +10,7 @@
   background: #fff;
   box-shadow: 0 0 5px black;
   align-items: center;
+  z-index: 2;
 }
 
 .mobile-only-nav .mobile-nav-title {
@@ -67,61 +68,96 @@
   }
 }
 
-#home-container {
+/* DESKTOP */
+#main-frame {
   display: grid;
   height: 100vh;
   grid-template-columns: 30% 1fr;
   grid-template-areas: "side main";
 }
-
-#home-container .side-about-me {
+#main-frame .main {
+  padding: 10vh 2vw;
+}
+/* ASIDE */
+#main-frame .side-about-me {
   padding-top: 10vh;
   grid-area: side;
   text-align: center;
   width: 100%;
   height: 100vh;
   box-shadow: 0 0 30px #88888888;
+  display: flex;
+  flex-direction: column;
 }
 
 
-#home-container .side-about-me h1,
-#home-container .side-about-me h2 {
+#main-frame .side-about-me h2 {
   text-transform: uppercase;
 }
 
-#home-container .side-about-me h1 {
+#main-frame .side-about-me .title{
+  text-transform: uppercase;
   margin-bottom: 8vh;
   font-size: 2vw;
+  transition: background;
+  transition-duration:  .4s;
+  text-decoration: none;
+  color: black;
+}
+#main-frame .side-about-me .title:hover{
+  background: #e1e1e1;
+  cursor: pointer;
 }
 
-#home-container .side-about-me h2 {
+#main-frame .side-about-me h2 {
+  font-size: 1.5vw;
   margin-bottom: 5vh;
 }
 
-#home-container .side-about-me img {
+#main-frame .side-about-me img {
   width: 220px;
   height: auto;
   margin: 0px auto;
   border-radius: 50%;
 }
+#main-frame .side-about-me .description {
+  flex:1;
+}
+#main-frame .side-about-me .copyright {
+  font-size:12px;
+  color: gray;
+  padding: 20px 0;
+}
+#main-frame .side-about-me li {
+  list-style: none;
+  margin: 5vh 0;
+}
+#main-frame .side-about-me li a{
+  font-size:20px;
+  color: black;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+/* ASIDE END */
 
-#home-container .main {
+#main-frame .main {
   overflow-y: scroll;
   grid-area: main;
 }
 
+/* MEDIA QUERY */
 @media screen and (max-width:768px) {
-  #home-container {
+  #main-frame {
     grid-template-columns: 1fr;
-    grid-template-rows: 1000px 1fr;
-    grid-template-areas: "side""main";
+    grid-template-rows: "1fr";
+    grid-template-areas: "main";
   }
 
-  #home-container .main {
+  #main-frame .main {
     overflow-y: visible;
   }
 
-  #home-container .side-about-me h1 {
+  #main-frame .side-about-me{
     display: none;
   }
 
@@ -130,9 +166,4 @@
     flex-direction: row;
     position: fixed;
   }
-}
-@media screen and (min-width:768px) {
-    .mobile-only-menu {
-        display: none;
-    }
 }
