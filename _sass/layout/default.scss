@@ -52,6 +52,7 @@
 }
 .drop-down-menu .menu-item a {
   text-decoration: none;
+  text-transform: uppercase;
   color: black;
 }
 .icon-set {
@@ -64,12 +65,7 @@
   cursor: pointer;
 }
 
-body:hover {
-  .drop-down-meue {
-    display: none;
-  }
-}
-.icon-set:hover {
+.icon-set:active {
   .drop-down-menu {
     display: block;
   }
@@ -100,27 +96,6 @@ input {
   margin-bottom: 3px;
   box-shadow: 0 1px 3px rgba(0,0,0,80);
   width:24px;
-}
-#mobile-only-menu .mobile-only-menu-title {
-  color: white;
-  font-size: 10vw;
-  text-transform: uppercase;
-  padding-bottom: 2vh;
-  margin-bottom: 3vh;
-  border-bottom: 1px solid #fff;
-  width: 80%;
-}
-
-#mobile-only-menu .mobile-only-menu-item {
-  font-size: 5vw;
-  margin: 2.5vh;
-  text-transform: uppercase;
-
-  a {
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-  }
 }
 
 /* DESKTOP */
