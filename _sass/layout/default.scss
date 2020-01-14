@@ -65,7 +65,7 @@
   cursor: pointer;
 }
 
-.icon-set:hover ~.backdrop {
+.icon-set:hover ~ .backdrop {
   display: block;
 }
 .backdrop {
@@ -75,7 +75,6 @@
   left: 0;
   width: 100vw;
   height:100vh;
-  background: red;
   z-index: 1.5;
 }
 .backdrop:hover {
