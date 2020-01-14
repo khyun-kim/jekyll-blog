@@ -18,7 +18,11 @@
 }
 
 #home-container .recently-list .card {
-  display: flex;
+  display: grid;
+  grid-template-rows: 35px 210px minmax(0,1fr);
+  grid-template-areas: "post-title"
+                      "post-img"
+                      "post-context";
   text-align: center;
   padding: 20px 10px;
   min-width: 230px;
@@ -41,6 +45,7 @@
   white-space:nowrap;
   overflow:hidden;
   text-overflow:ellipsis;
+  grid-area: post-title;
 }
 
 #home-container .recently-list .card .card-context {
@@ -53,20 +58,22 @@
   width: 210px;
   height: 210px;
   border-radius: 50%;
-  margin: 0 auto;
-  padding-bottom: 10px;
+  margin: 0 auto; 
+  margin-bottom: 10px;
+  grid-area: post-img;
 }
 
 #home-container .recently-list .card .card-context p {
-  flex: 1;
-  height: 100%;
+  grid-area: post-context;
+  /*
   word-wrap: break-word;
-  overflow: hidden;
+  //overflow:hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
   line-height: 22px;
+  */
 }
 
 @media screen and (max-width:768px) {
@@ -76,13 +83,16 @@
     margin: 20px 5%;
     text-align: left;
   }
-
+  #home-container .recently-list .card h3 {
+    margin-bottom: 15px;
+  }
   #home-container .recently-list .card .card-context {
     flex-direction: row;
   }
 
   #home-container .recently-list .card .card-context img {
-    width: 64px;
-    height: 64px;
+    width: auto;
+    height: 120px;
+    margin: auto;
   }
 }
