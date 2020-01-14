@@ -22,36 +22,26 @@
   <div class="mobile-only-nav">
     <span class="mobile-nav-title">{{site.social.github}}'s dev blog</span>
   </div>
-  <div class="icon-set" onclick="clickOnEvent()">
+  <div class="icon-set">
     <span class="icon" id="icon1"></span>
     <span class="icon" id="icon2"></span>
     <span class="icon" id="icon3"></span>
+    <ul class="drop-down-menu" id="menu">
+      <li class="menu-item">
+        <a>Blog</a>
+      </li>
+      <li class="menu-item">
+        <a>Posts</a>
+      </li>
+      <li class="menu-item">
+        <a>Portfolios</a>
+      </li>
+      <li class="menu-item">
+        <a>About me</a>
+      </li>
+    </ul>
   </div>
-  <ul class="drop-down-menu" id="menu">
-    <li class="menu-item">
-      <a>Blog</a>
-    </li>
-    <li class="menu-item">
-      <a>Posts</a>
-    </li>
-    <li class="menu-item">
-      <a>Portfolios</a>
-    </li>
-    <li class="menu-item">
-      <a>About me</a>
-    </li>
-  </ul>
-  <div id="mobile-only-menu">
-    <h1 class="mobile-only-menu-title">menu</h1>
-    <nav>
-      <ul>
-        <li class="mobile-only-menu-item"><a href="{{site.url}}/posts">post</a></li>
-        <li class="mobile-only-menu-item"><a href="{{site.url}}/portfolios">portfolios</a></li>
-        <li class="mobile-only-menu-item"><a href="{{site.url}}/about">about me</a></li>
-        <li class="mobile-only-menu-item"><a onclick="clickOffEvent()">exit</a></li>
-      </ul>
-    </nav>
-  </div>
+  
   <!-- for Desktop -->
   <div id="main-frame">
 
