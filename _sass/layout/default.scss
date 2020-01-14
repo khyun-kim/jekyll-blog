@@ -3,21 +3,6 @@
   margin: 0;
 }
 
-@keyframes menuOn {
-  from {
-    #icon2 {
-      display: block;
-    }
-
-  }
-  to{
-    #icon2 {
-      display: none;
-    }
-  }
-}
-
-
 /* MOBILE ONLY*/
 .mobile-only-nav {
   display: none;
