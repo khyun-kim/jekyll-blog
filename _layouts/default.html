@@ -3,15 +3,16 @@
 {% include head.html %}
 
 <body>
+
   <script>
     function clickOnEvent() {
-      var el = document.getElementById("mobile-only-menu");
+      var el = document.getElementById("menu");
       console.log(el);
-      el.style.display = "flex";
+      el.style.display = "block";
     }
 
     function clickOffEvent() {
-      var el = document.getElementById("mobile-only-menu");
+      var el = document.getElementById("menu");
       console.log(el);
       el.style.display = "none";
     }
@@ -20,8 +21,26 @@
   <!-- Mobile Only-->
   <div class="mobile-only-nav">
     <span class="mobile-nav-title">{{site.social.github}}'s dev blog</span>
-    <img id="menu-icon" onclick="clickOnEvent()" src="{{site.url}}/assets/img/profile.png">
   </div>
+  <div class="icon-set" onclick="clickOnEvent()">
+    <span class="icon" id="icon1"></span>
+    <span class="icon" id="icon2"></span>
+    <span class="icon" id="icon3"></span>
+  </div>
+  <ul class="drop-down-menu" id="menu">
+    <li class="menu-item">
+      <a>Blog</a>
+    </li>
+    <li class="menu-item">
+      <a>Posts</a>
+    </li>
+    <li class="menu-item">
+      <a>Portfolios</a>
+    </li>
+    <li class="menu-item">
+      <a>About me</a>
+    </li>
+  </ul>
   <div id="mobile-only-menu">
     <h1 class="mobile-only-menu-title">menu</h1>
     <nav>
@@ -44,6 +63,9 @@
       <span class="description">{{site.profile.description}}</span>
       <nav>
         <ul>
+          <li>
+            <a href="{{site.url}}">home</a>
+          </li>
           <li>
             <a href="{{site.url}}/posts">Posts</a>
           </li>

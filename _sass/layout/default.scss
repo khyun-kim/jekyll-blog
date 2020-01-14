@@ -2,6 +2,22 @@
   padding: 0;
   margin: 0;
 }
+
+@keyframes menuOn {
+  from {
+    #icon2 {
+      display: block;
+    }
+
+  }
+  to{
+    #icon2 {
+      display: none;
+    }
+  }
+}
+
+
 /* MOBILE ONLY*/
 .mobile-only-nav {
   display: none;
@@ -11,6 +27,7 @@
   box-shadow: 0 0 5px black;
   align-items: center;
   z-index: 2;
+  height: 64px;
 }
 
 .mobile-only-nav .mobile-nav-title {
@@ -41,10 +58,57 @@
   justify-content: center;
   text-align: center;
 }
-.mobile-only-nav ul {
+.drop-down-menu {
     margin: 0;
     padding: 0;
     list-style: none;
+    top:64px;right:0px;padding: 10px;
+    z-index:1.5;
+    position:fixed;
+    width: 100%;
+    padding: 0 10px;
+    //display: block;
+    display: none;
+    background: #ffffff;
+    border-radius: 0 0 5px 5px;
+    text-decoration: none;
+    box-shadow: 1px 0px 3px rgba(0,0,0,80);
+}
+.drop-down-menu .menu-item {
+  font-weight: 700;
+  padding:5px 5px;
+  margin: 0px 5px;
+  border-bottom: 1px solid #e1e1e1;
+  text-align: right;
+}
+.drop-down-menu .menu-item a {
+  text-decoration: none;
+  color: black;
+}
+.icon-set {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  height: 64px;
+  padding: 26px;
+  cursor: pointer;
+}
+.icon-set:hover ~.drop-down-menu{
+  display:block;
+}
+
+input {
+  position: fixed;
+  left: -9999px;
+}
+.icon-set .icon {
+  text-align: center;
+  display: block;
+  border: 2px solid white;
+  margin-bottom: 3px;
+  box-shadow: 0 1px 3px rgba(0,0,0,80);
+  width:24px;
 }
 #mobile-only-menu .mobile-only-menu-title {
   color: white;
@@ -130,13 +194,18 @@
 }
 #main-frame .side-about-me li {
   list-style: none;
-  margin: 5vh 0;
+  margin: 4vh 0;
 }
 #main-frame .side-about-me li a{
   font-size:20px;
   color: black;
   text-transform: uppercase;
   cursor: pointer;
+  transition: .4s;
+  text-decoration: none;
+}
+#main-frame .side-about-me li a:hover{
+  font-size: 25px;
 }
 /* ASIDE END */
 
