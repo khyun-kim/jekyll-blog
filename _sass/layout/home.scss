@@ -7,6 +7,7 @@
   font-size: 40px;
   font-weight: 800;
   margin-bottom: 80px;
+  color:#020202;
 }
 
 #home-container .recently-list {
@@ -18,61 +19,59 @@
 }
 
 #home-container .recently-list .card {
-  display: grid;
-  grid-template-rows: 35px 210px minmax(0,1fr);
-  grid-template-areas: "post-title"
-                      "post-img"
-                      "post-context";
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  padding: 20px 10px;
   min-width: 230px;
   width: 230px;
   height: 380px;
   margin: 50px;
   border-radius: 10px;
+  background: #a1a1a1;
   box-shadow: 0 0 10px #88888888;
-  flex-direction: column;
   transition-duration: .3s;
 }
 #home-container .recently-list .card:hover {
   cursor: pointer;
-  background: #efefef;
+  transform: scale(1.1);
 }
 
 #home-container .recently-list .card h3 {
+  margin: 0;
+  height: 30px;
+  font-size: 20px;
+  padding:5px;
+  border-radius: 10px 10px 0 0 ;
+  color: white;
+
+  //한줄 줄이기 처리
   display:inline-block;
   white-space:nowrap;
   overflow:hidden;
   text-overflow:ellipsis;
-  grid-area: post-title;
 }
-
-#home-container .recently-list .card .card-context {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
+#home-container .recently-list .card img {
+  width: 230px;
+  height: 230px;
 }
-
-#home-container .recently-list .card .card-context img {
-  width: 210px;
-  height: 210px;
-  border-radius: 50%;
-  margin: 0 auto; 
-  margin-bottom: 10px;
-  grid-area: post-img;
+#home-container .recently-list .card i {
+  width: 230px;
+  height: 230px;
+  font-size: 180px;
+  padding: 25px 0;
+  color: gray;
+  background-color: white;
 }
-
-#home-container .recently-list .card .card-context p {
-  grid-area: post-context;
-  /*
-  word-wrap: break-word;
-  //overflow:hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
+#home-container .recently-list .card p {
+  height: 100px;
+  background: #e1e1e1;
+  //여러줄 줄이기 처리
+  display:-webkit-box;
+  white-space:wrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
-  line-height: 22px;
-  */
+  -webkit-line-clamp: 5;
 }
 
 @media screen and (max-width:768px) {

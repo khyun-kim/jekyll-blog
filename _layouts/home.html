@@ -7,15 +7,17 @@ layout: default
 
   <div class="recently-list">
 
-      {% for post in site.posts offset:1 limit:6%}
-          <div onclick="location.href='{{post.url}}'" class=card>
-              <h3>{{post.title}}</h3>
-              <div class="card-context">
-              <img src="{{site.url}}/assets/img/profile.png">
-              <p>{{post.description}}</p>
-            </div>
-          </div>
-      {% endfor %}
+    {% for post in site.posts offset:0 limit:6%}
+    <div onclick="location.href='{{post.url}}'" class=card>
+      <h3>{{post.title}}</h3>
+      {% if post.image %}
+      <img src="{{site.url}}/assets/img/profile.png">
+      {% else %}
+      <i class="fas fa-file-invoice"></i>
+      {% endif %}
+      <p>{{post.description}}</p>
+    </div>
+    {% endfor %}
   </div>
 
 </div>
