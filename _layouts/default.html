@@ -8,9 +8,7 @@
     <span class="mobile-nav-title">{{site.social.github}}'s dev blog</span>
   </div>
   <div class="icon-set">
-    <span class="icon" id="icon1"></span>
-    <span class="icon" id="icon2"></span>
-    <span class="icon" id="icon3"></span>
+    <span class="icon"></span>
   </div>
 
   <div class="side">
@@ -67,14 +65,17 @@
   <script>
     var flag = 0;
     menuIcon = document.querySelector('.icon-set');
+    icon = document.querySelector('.icon-set .icon');
     side = document.querySelector('.side');
     backdrop = document.querySelector(".sideNavBackdrop");
 
     menuIcon.addEventListener("click", () => {
       side.classList.toggle("open");
+      icon.classList.toggle("active");
     })
     backdrop.addEventListener("click", () => {
       side.classList.toggle("open");
+      icon.classList.toggle("active");
     })
   </script>
 
