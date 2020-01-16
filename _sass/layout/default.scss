@@ -91,11 +91,12 @@
   transition: .3s;
   left: 0;
 }
+/* icon animation */
 .icon-set .icon::after {
-  top: -16px;
+  top: -12px;
 }
 .icon-set .icon::before {
-  top: 16px;
+  top: 12px;
 }
 .icon-set .icon.active {
   background: rgba(0,0,0,0);
