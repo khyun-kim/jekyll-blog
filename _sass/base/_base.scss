@@ -169,9 +169,9 @@ blockquote {
 pre,
 code {
   @include relative-font-size(0.9375);
-  border: 1px solid $theme-color-light;
   border-radius: 3px;
   background-color: $code-background-color;
+  color:white;
 }
 
 code {
@@ -190,14 +190,15 @@ pre {
 }
 
 .highlight {
-  background: $code-background-color;
+  border-radius: 3px;
+  background: rgb(39,40,34);
   @extend %vertical-rhythm;
 
   .highlighter-rouge & {
-    background: $code-background-color;
+    border-radius: 3px;
+    background: rgb(39,40,34);
   }
 }
-
 
 
 /**

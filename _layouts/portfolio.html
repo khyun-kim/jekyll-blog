@@ -4,13 +4,19 @@ layout: default
 <div id="portfolio">
   <h2 class="page-title">{{page.title}}</h2>
   <h5> ~ {{page.date | date_to_string}} ~ </h5>
+  {% if page.link %}
+  <div id="git-link">
+    <i class="fas fa-link"
+      id="git-link"><a href="{{page.link}}">{{page.link}}</a></i>
+  </div>
+  {%endif%}
 
   <article class="desc">
     <p>{{page.description}}</p>
   </article>
   <h3>사용된 기술</h3>
   <div class="tags">
-    {%for tag in page.tags%} 
+    {%for tag in page.tags%}
     <div class="tag">
       <img src="{{site.url}}/assets/tag/{{tag}}.png">
       <strong><span class="tag-name">{{tag}}</span></strong>

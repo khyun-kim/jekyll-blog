@@ -5,7 +5,7 @@ category: post
 author: Khyun-kim
 description: 파이썬을 이용한 빅데이터에 대하여 공부하며 작성한 내용입니다.
 tags: [python]
-image: profile.png
+image: 
 ---
 
 

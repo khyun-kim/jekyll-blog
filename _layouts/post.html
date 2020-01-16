@@ -1,11 +1,14 @@
 ---
 layout: default
 ---
-<div id="post" class="post">
-  <div class="post-header">
-  <h1 class="post-title">{{ page.title }}</h1>
-  <p>{{ page.date | date: '%Y년 %m월 %d일 ' }}</p>
-  <p class="post-author">{{ page.author }}</p>
-  </div>
-  {{ content }}
+<div id="post">
+  <h2 class="page-title">{{page.title}}</h2>
+  <h5> ~ {{page.date | date_to_string}} ~ </h5>
+
+  <article class="desc">
+    <p>{{page.description}}</p>
+  </article>
+  <article class="contents">
+    <p>{{ content }}</p>
+  </article>
 </div>

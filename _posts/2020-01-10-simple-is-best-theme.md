@@ -4,6 +4,8 @@ title: "Simple Is Best Theme Project"
 category: portfolio
 author: Khyun-kim
 tags: [html, javascript, css]
+image: sibt.png
+link: https://github.com/khyun-kim/khyun-kim.github.io
 description: 이 프로젝트의 이름은 SIBT(Simple Is Best Theme) 입니다! <br>
     HTML과 CSS를 주로 공부하기위하여 작성되었습니다. <br>
     HTML과 CSS를 학습해가며 만든 Theme이기 때문에 미숙한 면이 많이 보일 수 있습니다.
