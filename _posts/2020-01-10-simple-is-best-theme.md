@@ -1,7 +1,6 @@
 ---
 layout: portfolio
 title: "Simple Is Best Theme Project"
-category: portfolio
 author: Khyun-kim
 tags: [html, javascript, css]
 image: sibt.png

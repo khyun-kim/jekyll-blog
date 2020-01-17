@@ -1,24 +1,17 @@
 ---
 layout: default
 ---
-<div id="posts-page-content">
-  <h1> posts </h1>
+<div id="posts">
+  <h1>Posts</h1>
   <ul>
-    {%for p in site.posts%}
-    {%if p.category == "post"%}
+    {% for post in site.posts %}
     <li>
-        <img />
-
-        <div class="post-text">
-          <h2 class="post-title">{{p.title}}</h2>
-          <span class="post-author">by {{p.author}} -{{p.date|date_to_string}}</span>
-          <br>
-          <p class="post-description">{{p.description}}</p>
-        </div>
+      <div class="post" onclick="location.href='{{post.url}}'">
+        <h2>{{post.title}}</h2>
+        <div class="date-author"><span>{{post.date | date_to_string}}</span><span>{{post.author}}</span></div>
+        <span>{{post.description}}</span>
+      </div>
     </li>
-    <br>
-    {%endif%}
     {%endfor%}
   </ul>
-
 </div>

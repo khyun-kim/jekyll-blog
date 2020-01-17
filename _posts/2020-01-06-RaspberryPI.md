@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "라즈베리파이"
-category: post
 author: Khyun-kim
 description: RaspberryPI를 학습하면서 알게된 내용을 기록한 포스트입니다. RaspberryPI의 기본적인 내용을 담고 있으며, Javascript를 이용하여 학습을 진행하였습니다.
 tags: [RaspberryPi, Raspbian, Node.js]

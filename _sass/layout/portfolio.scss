@@ -53,13 +53,17 @@
     #git-link {
         text-align: left;
         a {
-            display: -webkit-box;
+            display: -webkit-inline-box;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: wrap;
             -webkit-box-orient: vertical;
             -webkit-line-clamp: 1;
             cursor: pointer;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            padding: 3px;
+            margin-bottom: 50px;
         }
     }
     @media screen and (max-width:768px) {
