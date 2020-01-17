@@ -52,19 +52,13 @@
     }
     #git-link {
         text-align: left;
-        padding: 3px;
-        margin: 10px 0;
-        margin-left: 20px;
         a {
-            padding: 3px;
-            vertical-align: middle;
-            max-width: 20vw;
-            background: #e1e1e1;
+            display: -webkit-box;
             overflow: hidden;
-            display:inline-block;
             text-overflow: ellipsis;
-            white-space: nowrap;
-            border-radius: 5px;
+            white-space: wrap;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
             cursor: pointer;
         }
     }
