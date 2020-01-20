@@ -259,6 +259,7 @@ ul {
 #main-frame .main {
   overflow-y: scroll;
   grid-area: main;
+  box-sizing: border-box;
 }
 
 /* MEDIA QUERY */
